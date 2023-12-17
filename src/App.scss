@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+//COLORS
+$light: #fcf4e7;
+$pink: #f6d7d4;
+$dark: #34332f;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter Tight", sans-serif;
+  background-color: $light;
+  color: $dark;
+  //overflow-x: hidden;
+}
+
+//CONTAINER
+.grid-width-full {
+  max-width: 1920px;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.grid-width-wide {
+  max-width: 1760px;
+  width: 90vw;
+  margin: 1.5rem auto;
+}
+
+.grid-width {
+  max-width: 1280px;
+  width: 90vw;
+  margin: 1.5rem auto;
+}
+
+.space-top {
+  margin-top: 5rem;
+}
+.space-bottom {
+  margin-bottom: 5rem;
+}
+
+//TYPOGRAPHY
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin: 0;
+}
+h3,
+.h3-style {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+p,
+span {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 0;
+}
+li,
+a {
+  text-decoration: none;
+  list-style-type: none;
+  cursor: pointer;
+  color: $dark;
+}
+nav,
+ul,
+li {
+  padding: 0;
+}
+.App {
+  //background-color: #d6d6d6;
+}
+//NAVBAR
+.App .app-name a {
+  border: 3px solid $dark;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  transition: all 350ms ease-in-out;
+  position: relative;
+  span.top {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-weight: 700;
+    display: block;
+  }
+  span.btm {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    font-weight: 700;
+    display: block;
+    transform: rotate(180deg);
+  }
+  &:hover {
+    background-color: $dark;
+    color: $light;
+  }
+}
+nav.nav {
+  margin: 0;
+  padding: 1rem 0;
+}
+
+//Header
+.Header {
+  display: grid;
+  grid-gap: 5rem;
+  @media screen and (min-width: 900px) {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 0rem;
+  }
+  .Header-right {
+    display: flex;
+    gap: 2rem;
+    div {
+      background-color: $pink;
+      height: 500px;
+      width: 400px;
+    }
+  }
+}
