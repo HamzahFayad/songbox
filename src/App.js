@@ -17,11 +17,12 @@ function App() {
             <br />
             Rhythm &#9834;&#9834;&#9834;
           </h1>
-          <p>
+          <p style={{ textAlign: "justify" }}>
             Retro music in a modern hue, our jukebox echoes the essence of
-            vintage tunes. Step into a time capsule where the past harmonizes
-            with today, delivering the best of both worlds through a fusion of
-            vintage charm and modern style.
+            vintage tunes. Embark on a melodic time travel as our digital
+            jukebox breathes life into the classics - a dance between vintage
+            vibes and modern convenience, for an unforgettable musical voyage
+            through the ages.
           </p>
           <button>See more</button>
           <div className="features space-top">

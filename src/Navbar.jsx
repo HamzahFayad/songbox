@@ -10,6 +10,11 @@ function Navbar() {
           </a>
         </li>
       </ul>
+      <ul className="links">
+        <li>Demo</li>
+        <li>Playlist</li>
+        <li>Contact</li>
+      </ul>
     </nav>
   );
 }
