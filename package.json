@@ -13,7 +13,6 @@
     "eject": "react-scripts eject"
   },
   "main": "/index.js",
-  "devDependencies": {},
   "browserslist": {
     "production": [
       ">0.2%",
