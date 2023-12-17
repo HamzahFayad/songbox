@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  border-radius: 5px;
 }
 
 //COLORS
@@ -60,6 +61,17 @@ h1 {
   span {
     font-size: 1.45rem;
   }
+}
+h1.Headline {
+  position: relative;
+}
+h1.Headline::before {
+  content: url("../public/assets/circles-mini.svg");
+  position: absolute;
+  z-index: -1;
+  top: -50%;
+  left: -10%;
+  transform: scale(0.8);
 }
 h2 {
   font-size: 1.75rem;
@@ -123,6 +135,7 @@ button {
   padding: 0.5rem 1rem;
   transition: all 350ms ease-in-out;
   position: relative;
+  border-radius: 0;
   span.top {
     position: absolute;
     top: 0;

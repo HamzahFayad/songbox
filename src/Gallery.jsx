@@ -15,10 +15,15 @@ function Gallery() {
       name: "MJ",
       src: "https://i.pinimg.com/originals/30/fb/0d/30fb0d2726295a7c8ed2163dde1cebfe.jpg",
     },
+    {
+      id: 3,
+      name: "70s",
+      src: "https://mir-s3-cdn-cf.behance.net/project_modules/hd/0a22e047995365.588b1ebcbc069.jpg",
+    },
   ];
   return (
     <>
-      <span className="arrow">&rarr;</span>
+      {/* <span className="arrow">&rarr;</span> */}
       {galleryImages.map((img) => {
         return (
           <div className="poster" key={img.id}>

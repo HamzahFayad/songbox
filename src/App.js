@@ -8,7 +8,7 @@ function App() {
       <Navbar />
       <section className="Header space-top grid-width-wide">
         <div className="Header-left">
-          <h1>
+          <h1 className="Headline">
             Jukebox
             <span style={{ textTransform: "lowercase" }}>
               {" "}
@@ -24,6 +24,9 @@ function App() {
             vintage charm and modern style.
           </p>
           <button>See more</button>
+          <div className="features space-top">
+            <p>Our Features</p>
+          </div>
         </div>
         <div className="Header-right">
           <Gallery />
