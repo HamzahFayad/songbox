@@ -15,7 +15,7 @@ function App() {
               and a big portion of
             </span>
             <br />
-            Rhythm &#9834;
+            Rhythm &#9834;&#9834;&#9834;
           </h1>
           <p>
             Retro music in a modern hue, our jukebox echoes the essence of

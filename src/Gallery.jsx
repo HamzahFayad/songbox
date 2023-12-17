@@ -18,7 +18,7 @@ function Gallery() {
   ];
   return (
     <>
-      <span>&rarr;</span>
+      <span className="arrow">&rarr;</span>
       {galleryImages.map((img) => {
         return (
           <div className="poster" key={img.id}>
