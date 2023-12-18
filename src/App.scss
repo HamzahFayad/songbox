@@ -10,6 +10,9 @@ $light: #fcf4e7;
 $pink: #f6d7d4;
 $dark: #34332f;
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -28,8 +31,11 @@ body {
 
 .grid-width-wide {
   max-width: 1760px;
-  width: 90vw;
+  width: 85vw;
   margin: 1.5rem auto;
+  @media screen and (max-width: 599px) {
+    width: 90vw;
+  }
 }
 
 .grid-width {
@@ -96,6 +102,9 @@ a {
   list-style-type: none;
   cursor: pointer;
   color: $dark;
+  &:hover {
+    color: darken($pink, 16);
+  }
 }
 nav,
 ul,
@@ -157,7 +166,7 @@ button {
   }
 }
 nav.nav {
-  margin: 0;
+  margin: 0 auto;
   padding: 1rem 0;
   @media screen and (min-width: 599px) {
     display: flex;
@@ -249,5 +258,14 @@ nav.nav {
 //DEMO
 section.Demo {
   background-color: darken($pink, 4);
-  padding: 2rem;
+  padding: 2rem 0;
+  .demo-wrap {
+    background-color: $light;
+    box-shadow: 8px 8px 0 $dark;
+    border: 3px solid $dark;
+    height: 600px;
+    //width: 85%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
 }

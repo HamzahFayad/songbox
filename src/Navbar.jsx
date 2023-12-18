@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav className="nav">
+    <nav className="nav grid-width-wide">
       <ul className="nav-list">
         <li className="h3-style app-name">
           <a href="/">
@@ -11,7 +11,9 @@ function Navbar() {
         </li>
       </ul>
       <ul className="links">
-        <li>Demo</li>
+        <li>
+          <a href="#demo">Demo</a>
+        </li>
         <li>Playlist</li>
         <li>Contact</li>
       </ul>
