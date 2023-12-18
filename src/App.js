@@ -1,6 +1,6 @@
 import "./App.min.css";
 import Navbar from "./Navbar";
-import Gallery from "./Gallery";
+import GalleryList from "./GalleryList";
 
 function App() {
   return (
@@ -29,13 +29,14 @@ function App() {
             <p>Our Features</p>
           </div>
         </div>
-        <div className="Header-right">
-          <Gallery />
-        </div>
+        <>
+          <GalleryList />
+        </>
       </section>
 
       <section className="Demo grid-width-wide space-top">
         <h2>Demo</h2>
+        <audio src="./assets/Jordan-Critz-Meris.mp3" controls />
       </section>
     </div>
   );
