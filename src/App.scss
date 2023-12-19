@@ -90,6 +90,10 @@ h3,
   font-weight: 500;
   margin: 0;
 }
+h4 {
+  font-size: 1.1rem;
+  margin: 0;
+}
 p,
 span {
   font-size: 1.1rem;
@@ -263,9 +267,68 @@ section.Demo {
     background-color: $light;
     box-shadow: 8px 8px 0 $dark;
     border: 3px solid $dark;
-    height: 600px;
+    //height: 600px;
     //width: 85%;
     margin: 0 auto;
     padding: 1rem 2rem;
+    .demo-wrapper {
+      display: grid;
+      gap: 15px;
+      @media screen and (min-width: 900px) {
+        grid-template-columns: minmax(150px, 20%) 1fr;
+      }
+    }
+    //SIDEBAR
+    .demo-sidebar {
+      margin: 1rem 0;
+      padding: 1rem;
+      background-color: darken($pink, 5);
+      border-radius: 6px;
+      box-shadow: 7px 7px 0 $dark;
+    }
+    //PLAYLIST
+    .demo-playlist {
+      background-color: $dark;
+      box-shadow: 7px 7px 0 darken($pink, 14);
+      border-radius: 6px;
+      //height: 92.5%;
+      margin: 1rem 0;
+      padding: 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      @media screen and (max-width: 900px) {
+        place-items: center;
+      }
+      @media screen and (max-width: 900px) {
+        margin: 0;
+        padding: 0.75rem;
+        //place-items: baseline;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      }
+      gap: 15px;
+      .demo-song {
+        //max-width: 150px;
+        //max-height: 200px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        @media screen and (max-width: 768px) {
+          max-width: 100px;
+          //max-height: 150px;
+        }
+        .demo-name {
+          background-color: $light;
+          text-align: center;
+          font-size: 0.8rem;
+          font-weight: 500;
+          padding: 10px;
+        }
+        img {
+          width: 100%;
+          height: 92%;
+          object-fit: cover;
+          transition: transform 200ms ease-in-out;
+        }
+      }
+    }
   }
 }
