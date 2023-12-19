@@ -19,7 +19,9 @@ function Header() {
           life into the classics - a dance between vintage vibes and modern
           convenience, for an unforgettable musical voyage through the ages.
         </p>
-        <button>See more</button>
+        <button>
+          <a href="#demo">See more</a>
+        </button>
         <div className="features space-top">
           <p>Our Features</p>
         </div>
