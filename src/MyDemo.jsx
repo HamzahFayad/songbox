@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { demodata } from "./data/demo-data";
 import DemoItem from "./DemoItem";
+import Playlist from "./Playlist";
 
 function MyDemo() {
   const [isHome, setIsHome] = useState(true);
@@ -25,15 +26,31 @@ function MyDemo() {
   // };
 
   let playCurrentSong = (song) => {
-    //adds to playlist, but for new page not done yet
-    setPlaylist([...playlist, song]);
-    //set current song for demo
+    //display current song for demo
     setCurrent(song);
 
     setTimeout(() => {
       console.log(song);
     }, 500);
   };
+
+  let addToPlaylist = (song) => {
+    //adds to playlist, or remove
+    const songIndex = playlist.findIndex((p) => p.id === song.id);
+    if (songIndex === -1) {
+      //song not in the playlist, add it
+      setPlaylist([...playlist, song]);
+    } else {
+      //song already in the playlist, remove it
+      const updatedPlaylist = [...playlist];
+      updatedPlaylist.splice(songIndex, 1);
+      setPlaylist(updatedPlaylist);
+    }
+  };
+
+  // useEffect(() => {
+  //   console.log("useEffect", playlist);
+  // }, [playlist]);
 
   return (
     <section id="demo" className="Demo space-top">
@@ -53,6 +70,7 @@ function MyDemo() {
                     demoInfo={d}
                     //colorRed={colorRed}
                     playCurrentSong={playCurrentSong}
+                    addToPlaylist={addToPlaylist}
                   />
                 );
               })}
@@ -60,8 +78,9 @@ function MyDemo() {
           )}
           {!isHome && (
             <div className="demo-current-song demo-view">
-              <p>Song Playing</p>
-              <button onClick={toggleView}>Home</button>
+              <button className="homebtn" onClick={toggleView}>
+                &#8592; Home
+              </button>
               {current && (
                 <div className="playing-song" style={{ color: "white" }}>
                   <h2>{current.title}</h2>
@@ -69,6 +88,13 @@ function MyDemo() {
                   <div className="image-container">
                     <div className="inner"></div>
                     <img src={current.img} alt="" />
+                    <audio
+                      style={{ display: "none" }}
+                      src={current.audio}
+                      controls
+                      autoPlay
+                      loop
+                    />
                   </div>
                 </div>
               )}
@@ -76,6 +102,9 @@ function MyDemo() {
           )}
         </div>
       </div>
+      <br />
+      <br />
+      <Playlist playlist={playlist} />
     </section>
   );
 }

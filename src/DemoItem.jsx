@@ -1,13 +1,21 @@
-function DemoItem({ demoInfo, playCurrentSong, playSong }) {
+function DemoItem({ demoInfo, playCurrentSong, playSong, addToPlaylist }) {
   const playCurrent = () => {
     playCurrentSong(demoInfo);
     playSong();
   };
+
+  const addSong = () => {
+    addToPlaylist(demoInfo);
+  };
+
   return (
-    <div className="demo-song" onClick={playCurrent}>
-      <img src={demoInfo.img} alt={demoInfo.name} />
+    <div className="demo-song">
+      <img src={demoInfo.img} alt={demoInfo.name} onClick={playCurrent} />
       <p className="demo-name">
-        {demoInfo.title} <span className="add-to-playlist">♡</span>
+        {demoInfo.title}{" "}
+        <span className="add-to-playlist" onClick={addSong}>
+          ♡
+        </span>
       </p>
     </div>
   );
