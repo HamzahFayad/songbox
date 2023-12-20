@@ -5,6 +5,8 @@ export const demodata = [
     name: "Miki Matsubara",
     title: "Stay With Me ♪",
     img: "https://ih1.redbubble.net/image.4546560346.4850/flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
+    lyrics:
+      "To you... yes, my love to you Yes my love to you you, to you 私は私 貴方は貴方と 昨夜言ってた そんな気もするわ グレイのジャケットに 見覚えがある コーヒーのしみ To you... yes, my love to you Yes my love to you you, to you 私は私 貴方は貴方と 昨夜言ってた そんな気もするわ グレイのジャケットに 見覚えがある コーヒーのしみ To you... yes, my love to you Yes my love to you you, to you 私は私 貴方は貴方と 昨夜言ってた そんな気もするわ グレイのジャケットに 見覚えがある コーヒーのしみ",
   },
   {
     id: 1,

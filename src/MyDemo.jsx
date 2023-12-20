@@ -96,6 +96,19 @@ function MyDemo() {
                       loop
                     />
                   </div>
+                  <p
+                    className="lyrics"
+                    style={{
+                      color: "white",
+                      maxWidth: "400px",
+                      maxHeight: "220px",
+                      overflowY: "scroll",
+                      textAlign: "center",
+                      margin: "2rem auto",
+                    }}
+                  >
+                    {current.lyrics}
+                  </p>
                 </div>
               )}
             </div>
