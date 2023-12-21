@@ -51,6 +51,4 @@ Instagram - [@haz_pro99](https://www.instagram.com/haz_pro99/)
 
 Project Link: [-](https://github.com/your_username/repo_name)
 
-<p align="right"><a href="#readme-top">back to top</a></p>
-
 <!-- ACKNOWLEDGMENTS -->
