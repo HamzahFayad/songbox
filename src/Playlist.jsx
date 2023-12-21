@@ -4,7 +4,7 @@ function Playlist({ playlist }) {
       <h2>Playlist</h2>
       {playlist.map((p) => {
         return (
-          <div>
+          <div key={p.id}>
             {p.id} {p.title}
           </div>
         );
