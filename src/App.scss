@@ -266,7 +266,11 @@ nav.nav {
   gap: 2rem;
   margin-top: 2rem;
   padding: 1.5rem;
-  background-color: darken($pink, 4);
+  background: linear-gradient(
+    45deg,
+    darken($pink, 4) 60%,
+    darken($light, 4) 100%
+  );
   box-shadow: 7px 7px 0 $dark;
   max-width: 100%;
   cursor: pointer;
@@ -287,6 +291,7 @@ nav.nav {
     transition: transform 2500ms;
   }
   img.heartshape:hover {
+    opacity: 0.9;
     transform: rotate(360deg);
   }
 }
@@ -387,7 +392,8 @@ section.Demo {
           width: 100%;
           height: 92%;
           object-fit: cover;
-          transform: translate3d(0, 0, 0) perspective(100vw) rotateY(0deg);
+          transform: scale(1);
+          //transform: translate3d(0, 0, 0) perspective(100vw) rotateY(0deg);
           transition: all 200ms ease-in-out;
           // &:hover {
           //   opacity: 0.7;
@@ -404,8 +410,8 @@ section.Demo {
           }
         }
         &:hover img {
-          transform: translate3d(0, 0, 0) perspective(25vw) rotateY(-15deg)
-            scale(0.9);
+          transform: scale(0.95);
+          //transform: translate3d(0, 0, 0) perspective(25vw) rotateY(-15deg) scale(0.9);
           box-shadow: 5px 5px 0 darken($pink, 10);
         }
       }

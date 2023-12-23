@@ -1,18 +1,18 @@
 {
   "playlist": [
     {
-      "id": 3,
-      "audio": "./assets/drift.mp3",
-      "name": "Omega Tribe",
-      "title": "Dear Breeze ♪",
-      "img": "https://i.scdn.co/image/ab6761610000e5ebdcac637d506908e16063a418"
-    },
-    {
       "id": 1,
       "audio": "./assets/Jordan-Critz-Meris.mp3",
       "name": "Miki Matsubara",
       "title": "Stay With Me ♪",
       "img": "https://ih1.redbubble.net/image.4546560346.4850/flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
+    },
+    {
+      "id": 3,
+      "audio": "./assets/drift.mp3",
+      "name": "Omega Tribe",
+      "title": "Dear Breeze ♪",
+      "img": "https://i.scdn.co/image/ab6761610000e5ebdcac637d506908e16063a418"
     }
   ]
 }

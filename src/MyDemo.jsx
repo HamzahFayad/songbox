@@ -8,9 +8,11 @@ function MyDemo() {
 
   const [current, setCurrent] = useState({});
 
-  const [playlist, setPlaylist] = useState([]);
+  //const [playlist, setPlaylist] = useState([]);
 
   const [myplaylist, setMyPlaylist] = useState([]);
+
+  const [refreshKey, setRefreshKey] = useState(0);
 
   let toggleView = () => {
     setIsHome(!isHome);
@@ -25,7 +27,7 @@ function MyDemo() {
         setMyPlaylist(data);
       })
       .catch((error) => console.error(error));
-  }, []);
+  }, [refreshKey]);
 
   //ADDING TO PLAYLIST - not working yet
   //  const [added, setAdded] = useState(false);
@@ -47,19 +49,19 @@ function MyDemo() {
     }, 500);
   };
 
-  let addToPlaylist = (song) => {
-    //adds to playlist, or remove
-    const songIndex = playlist.findIndex((p) => p.id === song.id);
-    if (songIndex === -1) {
-      //song not in the playlist, add it
-      setPlaylist([...playlist, song]);
-    } else {
-      //song already in the playlist, remove it
-      const updatedPlaylist = [...playlist];
-      updatedPlaylist.splice(songIndex, 1);
-      setPlaylist(updatedPlaylist);
-    }
-  };
+  // let addToPlaylist = (song) => {
+  //   //adds to playlist, or remove
+  //   const songIndex = playlist.findIndex((p) => p.id === song.id);
+  //   if (songIndex === -1) {
+  //     //song not in the playlist, add it
+  //     setPlaylist([...playlist, song]);
+  //   } else {
+  //     //song already in the playlist, remove it
+  //     const updatedPlaylist = [...playlist];
+  //     updatedPlaylist.splice(songIndex, 1);
+  //     setPlaylist(updatedPlaylist);
+  //   }
+  // };
 
   async function postToPlaylist(song) {
     const songIndex = myplaylist.findIndex((p) => p.id === song.id);
@@ -72,6 +74,7 @@ function MyDemo() {
         body: JSON.stringify(song),
       }).then((response) => {
         console.log(response);
+        setRefreshKey((oldKey) => oldKey + 1);
       });
     } else {
       await fetch(`http://localhost:8000/playlist/${song.id}`, {
@@ -80,6 +83,7 @@ function MyDemo() {
         body: JSON.stringify(song),
       }).then((response) => {
         console.log(response);
+        setRefreshKey((oldKey) => oldKey - 1);
       });
     }
   }
