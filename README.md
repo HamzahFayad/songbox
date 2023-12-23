@@ -2,7 +2,7 @@
 
 ## About The Project
 
-![Webapp Screenshot](./public/assets/screenshot.png)
+![Webapp Screenshot](./public/assets/screenshotv1.png)
 
 Welcome to SONG BOX - the Retro Jukebox Web App repository! This project aims to create a nostalgic yet modern web application inspired by classic jukeboxes, offering users an immersive experience into the world of vintage music.
 
