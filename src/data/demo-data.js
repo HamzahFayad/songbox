@@ -30,9 +30,9 @@ export const demodata = [
   {
     id: 5,
     audio: "./assets/drift.mp3",
-    name: "Miki Matsubara",
-    title: "Stay With Me ♪",
-    img: "https://lastfm.freetls.fastly.net/i/u/ar0/9be507b7ef351b0548d3f58da6a09a10.jpg",
+    name: "Mariya Takeuchi ",
+    title: "Plastic Love ♪",
+    img: "https://i.scdn.co/image/ab67616d0000b273676ca4dc8c635709448286ef",
   },
   {
     id: 6,
