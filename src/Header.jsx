@@ -1,6 +1,11 @@
 import GalleryList from "./GalleryList";
 
 function Header() {
+  let play = () => {
+    console.log("play");
+  };
+
+  let handleHearts = () => {};
   return (
     <section className="Header space-top grid-width-wide">
       <div className="Header-left">
@@ -22,9 +27,24 @@ function Header() {
         <button>
           <a href="#demo">See more</a>
         </button>
-        <div className="features space-top">
-          <p>Our Features</p>
+        <div className="features" onClick={play}>
+          <span className="top">&#8514;</span>
+          <img className="heartshape" src="./assets/hearts.png" alt="heart" />
+          <img
+            src="./assets/walkman.png"
+            className="walkman"
+            alt="walkman"
+            style={{ transform: "rotate(-90deg" }}
+          />
+          <img className="heartshape" src="./assets/hearts.png" alt="heart" />
+          <span className="btm">&#8514;</span>
         </div>
+
+        <p className="love">
+          <strong>
+            <em>made with love. ♥</em>
+          </strong>
+        </p>
       </div>
       <>
         <GalleryList />

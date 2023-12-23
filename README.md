@@ -4,7 +4,7 @@
 
 ![Webapp Screenshot](./public/assets/screenshot.png)
 
-Welcome to the Retro Jukebox Web App repository! This project aims to create a nostalgic yet modern web application inspired by classic jukeboxes, offering users an immersive experience into the world of vintage music.
+Welcome to SONG BOX - the Retro Jukebox Web App repository! This project aims to create a nostalgic yet modern web application inspired by classic jukeboxes, offering users an immersive experience into the world of vintage music.
 
 ### Overview:
 
@@ -16,9 +16,10 @@ The Retro Jukebox Web App allows users to:
 
 ### Features
 
+- Extensive Music Library Demo: Offer a vast collection of songs spanning different genres and eras. Users should be able to explore and select from a catalog of retro tracks, ensuring a diverse musical experience.
+- Search and Filter Options: Help users navigate the extensive music library efficiently. Allow users to search by artist, album, genre, or decade for quick access to desired tracks.
 - Timeless Playlist Creation: Curate playlists from an extensive library of retro tracks effortlessly.
 - Vintage Visuals, Modern Convenience: Enjoy a visually appealing interface with nods to classic jukeboxes while ensuring ease of use across devices.
-- Customized User Experience: Personalized recommendations and era-specific suggestions for a tailored musical journey.
 
 ### Getting Started
 

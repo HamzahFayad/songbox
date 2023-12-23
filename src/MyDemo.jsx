@@ -10,9 +10,22 @@ function MyDemo() {
 
   const [playlist, setPlaylist] = useState([]);
 
+  const [myplaylist, setMyPlaylist] = useState([]);
+
   let toggleView = () => {
     setIsHome(!isHome);
   };
+
+  useEffect(() => {
+    fetch("http://localhost:8000/playlist", {
+      method: "GET",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setMyPlaylist(data);
+      })
+      .catch((error) => console.error(error));
+  }, []);
 
   //ADDING TO PLAYLIST - not working yet
   //  const [added, setAdded] = useState(false);
@@ -48,6 +61,29 @@ function MyDemo() {
     }
   };
 
+  async function postToPlaylist(song) {
+    const songIndex = myplaylist.findIndex((p) => p.id === song.id);
+    console.log(songIndex);
+    if (songIndex === -1) {
+      //song not in the playlist, add it
+      await fetch("http://localhost:8000/playlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(song),
+      }).then((response) => {
+        console.log(response);
+      });
+    } else {
+      await fetch(`http://localhost:8000/playlist/${song.id}`, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(song),
+      }).then((response) => {
+        console.log(response);
+      });
+    }
+  }
+
   // useEffect(() => {
   //   console.log("useEffect", playlist);
   // }, [playlist]);
@@ -70,7 +106,7 @@ function MyDemo() {
                     demoInfo={d}
                     //colorRed={colorRed}
                     playCurrentSong={playCurrentSong}
-                    addToPlaylist={addToPlaylist}
+                    addToPlaylist={postToPlaylist}
                   />
                 );
               })}
@@ -117,7 +153,7 @@ function MyDemo() {
       </div>
       <br />
       <br />
-      <Playlist playlist={playlist} />
+      <Playlist playlist={myplaylist} />
     </section>
   );
 }

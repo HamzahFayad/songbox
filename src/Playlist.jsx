@@ -5,7 +5,7 @@ function Playlist({ playlist }) {
       {playlist.map((p) => {
         return (
           <div key={p.id}>
-            {p.id} {p.title}
+            {p.name} -- {p.title}
           </div>
         );
       })}
