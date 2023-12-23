@@ -5,7 +5,7 @@ import MyDemo from "./MyDemo";
 
 function App() {
   return (
-    <div className="App x">
+    <div className="App">
       <Navbar />
       <Header />
       <MyDemo />
