@@ -8,7 +8,7 @@ Welcome to SONG BOX - the Retro Jukebox Web App repository! This project aims to
 
 ### Overview:
 
-The Retro Jukebox Web App allows users to:
+This Retro Jukebox Web App allows users to:
 
 - Browse and select songs spanning various eras and genres.
 - Create personalized playlists reminiscent of classic jukebox experiences.
