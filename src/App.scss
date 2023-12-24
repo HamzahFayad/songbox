@@ -457,6 +457,12 @@ section.Demo {
   }
 }
 
+//PLAYLIST
+div.my-playlist {
+  background-color: $light;
+  padding: 2rem 0;
+}
+
 //KEYFRAME ANIMATIONS
 @keyframes rotateImage {
   from {

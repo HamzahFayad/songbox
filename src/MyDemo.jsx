@@ -93,72 +93,77 @@ function MyDemo() {
   // }, [playlist]);
 
   return (
-    <section id="demo" className="Demo space-top">
-      <div className="demo-wrap grid-width-wide">
-        <h4>[SONG BOX]</h4>
-        <div className="demo-wrapper">
-          <aside className="demo-sidebar">
-            <p>Sidebar</p>
-          </aside>
-          {isHome && (
-            <div className="demo-playlist demo-view">
-              {demodata.map((d) => {
-                return (
-                  <DemoItem
-                    playSong={toggleView}
-                    key={d.id}
-                    demoInfo={d}
-                    //colorRed={colorRed}
-                    playCurrentSong={playCurrentSong}
-                    addToPlaylist={postToPlaylist}
-                  />
-                );
-              })}
-            </div>
-          )}
-          {!isHome && (
-            <div className="demo-current-song demo-view">
-              <button className="homebtn" onClick={toggleView}>
-                &#8592; Home
-              </button>
-              {current && (
-                <div className="playing-song" style={{ color: "white" }}>
-                  <h2>{current.title}</h2>
-                  <h3>by {current.name}</h3>
-                  <div className="image-container">
-                    <div className="inner"></div>
-                    <img src={current.img} alt="" />
-                    <audio
-                      style={{ display: "none" }}
-                      src={current.audio}
-                      controls
-                      autoPlay
-                      loop
+    <>
+      <section id="demo" className="Demo space-top">
+        <div className="demo-wrap grid-width-wide">
+          <h4>[SONG BOX]</h4>
+          <div className="demo-wrapper">
+            <aside className="demo-sidebar">
+              <p>Sidebar</p>
+            </aside>
+            {isHome && (
+              <div className="demo-playlist demo-view">
+                {demodata.map((d) => {
+                  return (
+                    <DemoItem
+                      playSong={toggleView}
+                      key={d.id}
+                      demoInfo={d}
+                      //colorRed={colorRed}
+                      playCurrentSong={playCurrentSong}
+                      addToPlaylist={postToPlaylist}
                     />
+                  );
+                })}
+              </div>
+            )}
+            {!isHome && (
+              <div className="demo-current-song demo-view">
+                <button className="homebtn" onClick={toggleView}>
+                  &#8592; Home
+                </button>
+                {current && (
+                  <div className="playing-song" style={{ color: "white" }}>
+                    <h2>{current.title}</h2>
+                    <h3>by {current.name}</h3>
+                    <div className="image-container">
+                      <div className="inner"></div>
+                      <img src={current.img} alt="" />
+                      <audio
+                        style={{ display: "none" }}
+                        src={current.audio}
+                        controls
+                        autoPlay
+                        loop
+                      />
+                    </div>
+                    <p
+                      className="lyrics"
+                      style={{
+                        color: "white",
+                        maxWidth: "400px",
+                        maxHeight: "220px",
+                        overflowY: "scroll",
+                        textAlign: "center",
+                        margin: "2rem auto",
+                      }}
+                    >
+                      {current.lyrics}
+                    </p>
                   </div>
-                  <p
-                    className="lyrics"
-                    style={{
-                      color: "white",
-                      maxWidth: "400px",
-                      maxHeight: "220px",
-                      overflowY: "scroll",
-                      textAlign: "center",
-                      margin: "2rem auto",
-                    }}
-                  >
-                    {current.lyrics}
-                  </p>
-                </div>
-              )}
-            </div>
-          )}
+                )}
+              </div>
+            )}
+          </div>
         </div>
+        <br />
+        <br />
+        <div style={{ height: "40vh" }}></div>
+      </section>
+      <div className="my-playlist" id="playlist">
+        <Playlist playlist={myplaylist} />
       </div>
-      <br />
-      <br />
-      <Playlist playlist={myplaylist} />
-    </section>
+    </>
   );
 }
 

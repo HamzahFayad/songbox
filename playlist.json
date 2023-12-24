@@ -1,6 +1,13 @@
 {
   "playlist": [
     {
+      "id": 4,
+      "audio": "./assets/drift.mp3",
+      "name": "Yuri Tanaka",
+      "title": "City Lights ♪",
+      "img": "https://www.onthecornermanila.com/wp-content/uploads/2022/11/Yuri-Tanaka-City-Lights-3rd-Season-LP.jpg"
+    },
+    {
       "id": 1,
       "audio": "./assets/Jordan-Critz-Meris.mp3",
       "name": "Miki Matsubara",
