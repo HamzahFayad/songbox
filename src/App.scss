@@ -194,7 +194,7 @@ nav.nav {
   @media screen and (min-width: 900px) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-gap: 2rem;
+    grid-gap: 3rem;
   }
   .Header-right {
     display: grid;

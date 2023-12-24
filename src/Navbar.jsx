@@ -14,8 +14,12 @@ function Navbar() {
         <li>
           <a href="#demo">Demo</a>
         </li>
-        <li>Playlist</li>
-        <li>Contact</li>
+        <li>
+          <a href="/playlist">Playlist</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
     </nav>
   );
