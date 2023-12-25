@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function Gallery({ item }) {
   const [audio, setAudio] = useState(null);
+  const [buttonPlay, setButtonPlay] = useState("playbtn");
 
   //on play audio sample with visualizer
   let playAudio = (audio) => {
@@ -11,6 +12,7 @@ function Gallery({ item }) {
       // Handle the error
       console.error("Audio playback failed:", error);
     });
+    setButtonPlay("playbtn playling-btn");
   };
 
   let stopAudio = () => {
@@ -18,6 +20,7 @@ function Gallery({ item }) {
       audio.pause();
       audio.currentTime = 0;
     }
+    setButtonPlay("playbtn");
   };
 
   return (
@@ -28,7 +31,7 @@ function Gallery({ item }) {
           <div className="overlay-infos">
             <p className="song-name">{item.name}</p>
             <button
-              className="playbtn"
+              className={buttonPlay}
               onClick={() => {
                 playAudio(item.sample);
               }}
