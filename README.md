@@ -27,7 +27,8 @@ To run the Retro Jukebox Web App locally, follow these steps:
 
 1. Clone this repository.
 2. Install dependencies using npm install.
-3. Run the app using npm start.
+3. Run the json server using npx json-server --watch playlist.json --port 8000.
+4. Run the app using npm start.
    Access the app via your browser at http://localhost:3000.
 
 ### Built With

@@ -5,8 +5,11 @@ function Playlist({ playlist }) {
       <br />
       {playlist.map((p) => {
         return (
-          <div key={p.id}>
-            {p.name} -- {p.title}
+          <div key={p.id} className={"playlist-wrap inPlaylist-" + p.id}>
+            <h2>
+              <strong>{p.title}</strong>
+            </h2>
+            <h3>by {p.name}</h3>
           </div>
         );
       })}

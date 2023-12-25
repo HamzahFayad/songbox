@@ -65,13 +65,14 @@ function MyDemo() {
 
   async function postToPlaylist(song) {
     const songIndex = myplaylist.findIndex((p) => p.id === song.id);
-    console.log(songIndex);
+    const songInPlaylist = { ...song };
+    songInPlaylist.inPlaylist = true;
     if (songIndex === -1) {
       //song not in the playlist, add it
       await fetch("http://localhost:8000/playlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(song),
+        body: JSON.stringify(songInPlaylist),
       }).then((response) => {
         console.log(response);
         setRefreshKey((oldKey) => oldKey + 1);

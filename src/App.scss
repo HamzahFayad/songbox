@@ -386,8 +386,13 @@ section.Demo {
             width: 24px;
             height: 24px;
             border-radius: 100%;
+            &:hover,
+            &:focus {
+              color: red;
+              background-color: $pink;
+            }
           }
-          span.added {
+          span.fill-heart {
             color: red;
             background-color: $pink;
           }
@@ -465,6 +470,11 @@ section.Demo {
 div.my-playlist {
   background-color: $light;
   padding: 4rem 0;
+  .playlist-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
 }
 
 //KEYFRAME ANIMATIONS
