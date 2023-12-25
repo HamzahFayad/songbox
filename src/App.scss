@@ -386,10 +386,10 @@ section.Demo {
             width: 24px;
             height: 24px;
             border-radius: 100%;
+            transition: all 200ms;
             &:hover,
             &:focus {
-              color: red;
-              background-color: $pink;
+              scale: 1.2;
             }
           }
           span.fill-heart {

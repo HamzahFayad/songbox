@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 
 function DemoItem({ demoInfo, playCurrentSong, playSong, addToPlaylist }) {
+  const [playlistIds, setPlaylistIds] = useState([]);
+  const [isFill, setFill] = useState(false);
+
   const playCurrent = () => {
     playCurrentSong(demoInfo);
     playSong();
@@ -8,9 +11,8 @@ function DemoItem({ demoInfo, playCurrentSong, playSong, addToPlaylist }) {
 
   const addSong = () => {
     addToPlaylist(demoInfo);
+    setFill(!isFill);
   };
-
-  const [playlistIds, setPlaylistIds] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:8000/playlist", {
@@ -32,7 +34,9 @@ function DemoItem({ demoInfo, playCurrentSong, playSong, addToPlaylist }) {
       <p className="demo-name inPlaylist">
         {demoInfo.title}{" "}
         <span
-          className={`add-to-playlist ${isInPlaylist ? "fill-heart" : ""}`}
+          className={`add-to-playlist ${isInPlaylist ? "fill-heart" : ""} ${
+            isFill ? "fill-heart" : ""
+          }`}
           onClick={addSong}
         >
           ♡
