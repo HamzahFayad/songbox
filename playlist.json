@@ -15,6 +15,14 @@
       "title": "Airport Lady ♪",
       "img": "https://lastfm.freetls.fastly.net/i/u/ar0/9be507b7ef351b0548d3f58da6a09a10.jpg",
       "inPlaylist": true
+    },
+    {
+      "id": 1,
+      "audio": "./assets/Jordan-Critz-Meris.mp3",
+      "name": "Miki Matsubara",
+      "title": "Stay With Me ♪",
+      "img": "https://ih1.redbubble.net/image.4546560346.4850/flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
+      "inPlaylist": true
     }
   ]
 }

@@ -17,7 +17,7 @@ export const demodata = [
   },
   {
     id: 3,
-    audio: "./assets/drift.mp3",
+    audio: "./assets/Jordan-Critz-Meris.mp3",
     name: "Omega Tribe",
     title: "Dear Breeze ♪",
     img: "https://i.scdn.co/image/ab6761610000e5ebdcac637d506908e16063a418",
@@ -33,7 +33,7 @@ export const demodata = [
   },
   {
     id: 5,
-    audio: "./assets/drift.mp3",
+    audio: "./assets/Jordan-Critz-Meris.mp3",
     name: "Mariya Takeuchi ",
     title: "Plastic Love ♪",
     img: "https://i.scdn.co/image/ab67616d0000b273676ca4dc8c635709448286ef",
@@ -48,7 +48,7 @@ export const demodata = [
   },
   {
     id: 7,
-    audio: "./assets/drift.mp3",
+    audio: "./assets/Jordan-Critz-Meris.mp3",
     name: "Miki Matsubara",
     title: "Stay With Me ♪",
     img: "https://lastfm.freetls.fastly.net/i/u/ar0/9be507b7ef351b0548d3f58da6a09a10.jpg",
@@ -64,7 +64,7 @@ export const demodata = [
   },
   {
     id: 9,
-    audio: "./assets/drift.mp3",
+    audio: "./assets/Jordan-Critz-Meris.mp3",
     name: "Mariya Takeuchi ",
     title: "Plastic Love ♪",
     img: "https://i.scdn.co/image/ab67616d0000b273676ca4dc8c635709448286ef",
@@ -80,7 +80,7 @@ export const demodata = [
   },
   {
     id: 11,
-    audio: "./assets/drift.mp3",
+    audio: "./assets/Jordan-Critz-Meris.mp3",
     name: "Miki Matsubara",
     title: "Stay With Me ♪",
     img: "https://i.scdn.co/image/ab67616d0000b273676ca4dc8c635709448286ef",

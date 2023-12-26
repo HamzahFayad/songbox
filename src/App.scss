@@ -431,8 +431,12 @@ section.Demo {
         margin-bottom: 3rem;
       }
       .playing-song {
+        text-align: center;
         opacity: 0;
         animation: showSong 500ms ease-in-out 200ms forwards;
+        h2 {
+          margin-bottom: 1rem;
+        }
       }
       .image-container {
         width: 150px;
@@ -461,6 +465,10 @@ section.Demo {
           border-style: double solid;
           animation: rotateImage 15s infinite linear;
         }
+      }
+      audio {
+        display: block;
+        margin: 1rem auto;
       }
     }
   }

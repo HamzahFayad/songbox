@@ -14,6 +14,8 @@ function MyDemo() {
 
   const [refreshKey, setRefreshKey] = useState(0);
 
+  const [currentSongIndex, setCurrentSongIndex] = useState(0); // Track the index of the current song
+
   let toggleView = () => {
     setIsHome(!isHome);
   };
@@ -43,10 +45,19 @@ function MyDemo() {
   let playCurrentSong = (song) => {
     //display current song for demo
     setCurrent(song);
+    setCurrentSongIndex(song.id);
+    // setTimeout(() => {
+    //   console.log(song);
+    //   console.log(currentSongIndex);
+    // }, 500);
+  };
 
-    setTimeout(() => {
-      console.log(song);
-    }, 500);
+  // Function to play the next song
+  const playNextSong = () => {
+    const nextIndex = (currentSongIndex + 1) % demodata.length;
+    setCurrentSongIndex(nextIndex); // Update the index of the current song
+    setCurrent(demodata[nextIndex]);
+    console.log(nextIndex);
   };
 
   // let addToPlaylist = (song) => {
@@ -125,32 +136,25 @@ function MyDemo() {
                 </button>
                 {current && (
                   <div className="playing-song" style={{ color: "white" }}>
-                    <h2>{current.title}</h2>
-                    <h3>by {current.name}</h3>
+                    <h2>
+                      {current.title} <br />
+                      <span> by {current.name}</span>
+                    </h2>
                     <div className="image-container">
                       <div className="inner"></div>
                       <img src={current.img} alt="" />
-                      <audio
-                        style={{ display: "none" }}
-                        src={current.audio}
-                        controls
-                        autoPlay
-                        loop
-                      />
                     </div>
-                    <p
-                      className="lyrics"
-                      style={{
-                        color: "white",
-                        maxWidth: "400px",
-                        maxHeight: "220px",
-                        overflowY: "scroll",
-                        textAlign: "center",
-                        margin: "2rem auto",
-                      }}
-                    >
-                      {current.lyrics}
-                    </p>
+                    <audio
+                      id="player"
+                      //style={{ display: "none" }}
+                      src={current.audio}
+                      controls
+                      autoPlay
+                      loop
+                    />
+                    {currentSongIndex >= 0 && (
+                      <button onClick={playNextSong}>Next</button>
+                    )}
                   </div>
                 )}
               </div>
