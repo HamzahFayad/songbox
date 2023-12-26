@@ -14,6 +14,8 @@ function DemoItem({ demoInfo, playCurrentSong, playSong, addToPlaylist }) {
     setFill(!isFill);
   };
 
+  const isInPlaylist = playlistIds.includes(demoInfo.id);
+
   useEffect(() => {
     fetch("http://localhost:8000/playlist", {
       method: "GET",
@@ -22,21 +24,28 @@ function DemoItem({ demoInfo, playCurrentSong, playSong, addToPlaylist }) {
       .then((data) => {
         const extractedIds = data.map((item) => item.id);
         setPlaylistIds(extractedIds);
+        if (extractedIds.includes(demoInfo.id)) {
+          setFill(true);
+        }
       })
       .catch((error) => console.error(error));
   }, []);
-
-  const isInPlaylist = playlistIds.includes(demoInfo.id);
 
   return (
     <div className="demo-song">
       <img src={demoInfo.img} alt={demoInfo.name} onClick={playCurrent} />
       <p className="demo-name inPlaylist">
         {demoInfo.title}{" "}
-        <span
+        {/* <span
           className={`add-to-playlist ${isInPlaylist ? "fill-heart" : ""} ${
             isFill ? "fill-heart" : ""
           }`}
+          onClick={addSong}
+        >
+          ♡
+        </span> */}
+        <span
+          className={`add-to-playlist ${isFill ? "fill-heart" : ""}`}
           onClick={addSong}
         >
           ♡
