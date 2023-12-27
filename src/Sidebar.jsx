@@ -1,8 +1,11 @@
-function Sidebar() {
+function Sidebar({ headline }) {
   return (
     <>
       <div className="sidebar-wrap">
-        <p>Sidebar</p>
+        <h4>{headline}</h4>
+        <br />
+        <p>Form 1</p>
+        <p>Form 2</p>
       </div>
     </>
   );

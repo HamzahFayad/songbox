@@ -121,10 +121,7 @@ function MyDemo() {
           <div className="demo-wrapper">
             <div>
               <aside className="demo-sidebar">
-                <Sidebar />
-              </aside>
-              <aside className="demo-sidebar">
-                <Sidebar />
+                <Sidebar headline="Song Box is for music ♪ Song Box is for you" />
               </aside>
             </div>
             {isHome && (
