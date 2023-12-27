@@ -25,6 +25,14 @@
       "inPlaylist": true
     },
     {
+      "id": 4,
+      "audio": "./assets/drift.mp3",
+      "name": "Yuri Tanaka",
+      "title": "City Lights ♪",
+      "img": "https://www.onthecornermanila.com/wp-content/uploads/2022/11/Yuri-Tanaka-City-Lights-3rd-Season-LP.jpg",
+      "inPlaylist": true
+    },
+    {
       "id": 2,
       "audio": "./assets/drift.mp3",
       "name": "Toshiki Kadomatsu",

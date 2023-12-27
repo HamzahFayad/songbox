@@ -1,11 +1,15 @@
 function Playlist({ playlist }) {
   return (
     <div className="playlist grid-width-wide">
-      <h2>Playlist</h2>
+      {/* <h2>Playlist</h2> */}
       <br />
       {playlist.map((p) => {
         return (
-          <div key={p.id} className={"playlist-wrap inPlaylist-" + p.id}>
+          <div
+            style={{ order: p.id }}
+            key={p.id}
+            className={"playlist-wrap inPlaylist-" + p.id}
+          >
             <p>
               <strong>[0{p.id}]</strong>
             </p>

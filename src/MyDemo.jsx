@@ -179,7 +179,8 @@ function MyDemo() {
         <br />
         {/* <div style={{ height: "40vh" }}></div> */}
       </section>
-      <div className="my-playlist" id="playlist">
+      <div className="my-playlist grid-width-wide" id="playlist">
+        <h2>Playlist</h2>
         <Playlist playlist={myplaylist} />
       </div>
     </>

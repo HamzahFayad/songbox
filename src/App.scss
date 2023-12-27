@@ -489,6 +489,10 @@ section.Demo {
 div.my-playlist {
   background-color: $light;
   padding: 4rem 0;
+  .playlist {
+    display: flex;
+    flex-flow: column wrap;
+  }
   .playlist-wrap {
     h3 {
       @media screen and (max-width: 767px) {
