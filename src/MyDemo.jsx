@@ -14,7 +14,7 @@ function MyDemo() {
 
   const [refreshKey, setRefreshKey] = useState(0);
 
-  const [currentSongIndex, setCurrentSongIndex] = useState(0); // Track the index of the current song
+  const [currentSongIndex, setCurrentSongIndex] = useState(1); // Track the index of the current song
 
   let toggleView = () => {
     setIsHome(!isHome);
@@ -56,6 +56,14 @@ function MyDemo() {
   const playNextSong = () => {
     const nextIndex = (currentSongIndex + 1) % demodata.length;
     setCurrentSongIndex(nextIndex); // Update the index of the current song
+    setCurrent(demodata[nextIndex]);
+    console.log("Next" + nextIndex);
+  };
+
+  // Function to play the next song
+  const playPrevSong = () => {
+    const nextIndex = (currentSongIndex - 1) % demodata.length;
+    setCurrentSongIndex(nextIndex);
     setCurrent(demodata[nextIndex]);
     console.log(nextIndex);
   };
@@ -152,7 +160,10 @@ function MyDemo() {
                       autoPlay
                       loop
                     />
-                    {currentSongIndex >= 0 && (
+                    {current.id > 1 && (
+                      <button onClick={playPrevSong}>Prev</button>
+                    )}
+                    {current.id <= demodata.length && (
                       <button onClick={playNextSong}>Next</button>
                     )}
                   </div>
