@@ -329,6 +329,10 @@ section.Demo {
       background-color: darken($pink, 5);
       border-radius: 6px;
       box-shadow: 7px 7px 0 $dark;
+      min-height: 40%;
+      @media screen and (max-width: 900px) {
+        min-height: 150px;
+      }
     }
     //PLAYLIST
     .demo-view {
@@ -382,6 +386,9 @@ section.Demo {
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
+          @media screen and (max-width: 599px) {
+            text-align: left;
+          }
           span {
             width: 24px;
             height: 24px;
@@ -482,9 +489,16 @@ div.my-playlist {
   background-color: $light;
   padding: 4rem 0;
   .playlist-wrap {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    h3 {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 1rem;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
   }
 }
 

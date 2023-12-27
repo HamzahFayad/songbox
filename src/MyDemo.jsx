@@ -119,9 +119,14 @@ function MyDemo() {
         <div className="demo-wrap grid-width-wide">
           <h4>[SONG BOX]</h4>
           <div className="demo-wrapper">
-            <aside className="demo-sidebar">
-              <Sidebar />
-            </aside>
+            <div>
+              <aside className="demo-sidebar">
+                <Sidebar />
+              </aside>
+              <aside className="demo-sidebar">
+                <Sidebar />
+              </aside>
+            </div>
             {isHome && (
               <div className="demo-playlist demo-view">
                 {demodata.map((d) => {
