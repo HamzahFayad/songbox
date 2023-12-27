@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { demodata } from "./data/demo-data";
 import DemoItem from "./DemoItem";
 import Playlist from "./Playlist";
+import Sidebar from "./Sidebar";
 
 function MyDemo() {
   const [isHome, setIsHome] = useState(true);
@@ -119,7 +120,7 @@ function MyDemo() {
           <h4>[SONG BOX]</h4>
           <div className="demo-wrapper">
             <aside className="demo-sidebar">
-              <p>Sidebar</p>
+              <Sidebar />
             </aside>
             {isHome && (
               <div className="demo-playlist demo-view">
@@ -161,10 +162,10 @@ function MyDemo() {
                       loop
                     />
                     {current.id > 1 && (
-                      <button onClick={playPrevSong}>Prev</button>
+                      <button onClick={playPrevSong}>← back</button>
                     )}
                     {current.id <= demodata.length && (
-                      <button onClick={playNextSong}>Next</button>
+                      <button onClick={playNextSong}>next →</button>
                     )}
                   </div>
                 )}
@@ -174,7 +175,7 @@ function MyDemo() {
         </div>
         <br />
         <br />
-        <div style={{ height: "40vh" }}></div>
+        {/* <div style={{ height: "40vh" }}></div> */}
       </section>
       <div className="my-playlist" id="playlist">
         <Playlist playlist={myplaylist} />
