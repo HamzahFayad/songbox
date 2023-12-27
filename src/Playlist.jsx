@@ -12,10 +12,10 @@ function Playlist({ playlist }) {
             <figure>
               <img src={p.img} alt={p.name} className="playlist-wrap-img" />
             </figure>
-            <h2>
+            <h3>
               <strong>{p.title}</strong>
-            </h2>
-            <h3>by {p.name}</h3>
+            </h3>
+            <h4>by {p.name}</h4>
             <hr
               style={{ borderTop: "1px solid #34332f", marginBottom: "1rem" }}
             ></hr>

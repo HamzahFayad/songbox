@@ -342,11 +342,12 @@ section.Demo {
       //height: 92.5%;
       margin: 1rem 0;
       padding: 1.25rem;
+      max-height: 550px;
     }
     .demo-playlist {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      max-height: 500px;
+      max-height: 550px;
       overflow-y: scroll;
       overflow-x: hidden;
       @media screen and (max-width: 900px) {
@@ -471,7 +472,7 @@ section.Demo {
           height: 100%;
           object-fit: cover;
           border-radius: 50%;
-          border: 22px rgb(243, 237, 237);
+          border: 22px lighten($light, 4);
           border-style: double solid;
           animation: rotateImage 15s infinite linear;
         }

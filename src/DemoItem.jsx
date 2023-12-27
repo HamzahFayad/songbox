@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Heart from "./Heart";
 
 function DemoItem({ demoInfo, playCurrentSong, playSong, addToPlaylist }) {
   const [playlistIds, setPlaylistIds] = useState([]);
@@ -44,12 +45,14 @@ function DemoItem({ demoInfo, playCurrentSong, playSong, addToPlaylist }) {
         >
           ♡
         </span> */}
-        <span
+        {/* <span
           className={`add-to-playlist ${isFill ? "fill-heart" : ""}`}
           onClick={addSong}
+          title="add to playlist"
         >
           ♡
-        </span>
+        </span> */}
+        <Heart isFill={isFill} addSong={addSong} />
       </p>
     </div>
   );
