@@ -55,19 +55,25 @@ function MyDemo() {
     // }, 500);
   };
 
+  let filteredDemoSongs = demodata.filter(
+    (d) =>
+      d.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+      d.title.toLowerCase().includes(searchInput.toLowerCase())
+  );
+
   // Function to play the next song
   const playNextSong = () => {
-    const nextIndex = (currentSongIndex + 1) % demodata.length;
+    const nextIndex = (currentSongIndex + 1) % filteredDemoSongs.length;
     setCurrentSongIndex(nextIndex); // Update the index of the current song
-    setCurrent(demodata[nextIndex]);
+    setCurrent(filteredDemoSongs[nextIndex]);
     console.log("Next" + nextIndex);
   };
 
   // Function to play the next song
   const playPrevSong = () => {
-    const nextIndex = (currentSongIndex - 1) % demodata.length;
+    const nextIndex = (currentSongIndex - 1) % filteredDemoSongs.length;
     setCurrentSongIndex(nextIndex);
-    setCurrent(demodata[nextIndex]);
+    setCurrent(filteredDemoSongs[nextIndex]);
     console.log(nextIndex);
   };
 

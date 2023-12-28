@@ -188,6 +188,10 @@ nav.nav {
   }
 }
 
+div ::-webkit-scrollbar {
+  display: none;
+}
+
 //Header
 .Header {
   grid-gap: 5rem;
