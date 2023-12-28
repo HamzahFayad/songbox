@@ -13,6 +13,7 @@ function Playlist({ playlist }) {
             <p>
               <strong>[0{p.id}]</strong>
             </p>
+            <br />
             <figure>
               <img src={p.img} alt={p.name} className="playlist-wrap-img" />
             </figure>
@@ -20,9 +21,9 @@ function Playlist({ playlist }) {
               <strong>{p.title}</strong>
             </h3>
             <h4>by {p.name}</h4>
-            <hr
+            {/* <hr
               style={{ borderTop: "1px solid #34332f", marginBottom: "1rem" }}
-            ></hr>
+            ></hr> */}
           </div>
         );
       })}

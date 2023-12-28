@@ -491,9 +491,23 @@ div.my-playlist {
   padding: 4rem 0;
   .playlist {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
   }
   .playlist-wrap {
+    background-color: #f6d7d452;
+    padding: 15px 5px;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 0 darken($pink, 4);
+    @media screen and (max-width: 768px) {
+      display: grid;
+      place-items: center;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
     h3 {
       @media screen and (max-width: 767px) {
         margin-bottom: 1rem;
@@ -510,17 +524,17 @@ div.my-playlist {
       &::after {
         content: "";
         position: absolute;
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
         left: 8px;
         top: -8px;
         z-index: 9;
-        border: 2px solid darken($pink, 4);
+        border: 3px solid darken($pink, 4);
       }
       img.playlist-wrap-img {
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
         object-fit: cover;
         border-radius: 50%;
         margin-right: 1rem;
