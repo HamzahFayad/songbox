@@ -55,7 +55,7 @@ function MyDemo() {
     // }, 500);
   };
 
-  let filteredDemoSongs = demodata.filter(
+  const filteredDemoSongs = demodata.filter(
     (d) =>
       d.name.toLowerCase().includes(searchInput.toLowerCase()) ||
       d.title.toLowerCase().includes(searchInput.toLowerCase())
@@ -142,15 +142,8 @@ function MyDemo() {
             </div>
             {isHome && (
               <div className="demo-playlist demo-view">
-                {demodata
-                  .filter(
-                    (d) =>
-                      d.name
-                        .toLowerCase()
-                        .includes(searchInput.toLowerCase()) ||
-                      d.title.toLowerCase().includes(searchInput.toLowerCase())
-                  )
-                  .map((d) => {
+                {filteredDemoSongs.length > 0 ? (
+                  filteredDemoSongs.map((d) => {
                     return (
                       <DemoItem
                         playSong={toggleView}
@@ -161,7 +154,12 @@ function MyDemo() {
                         addToPlaylist={postToPlaylist}
                       />
                     );
-                  })}
+                  })
+                ) : (
+                  <p className="no-songs" style={{ color: "white" }}>
+                    Sorry, no songs were found :/
+                  </p>
+                )}
               </div>
             )}
             {!isHome && (
