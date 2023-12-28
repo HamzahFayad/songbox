@@ -17,6 +17,8 @@ function MyDemo() {
 
   const [currentSongIndex, setCurrentSongIndex] = useState(1); // Track the index of the current song
 
+  const [searchInput, setSearchInput] = useState("");
+
   let toggleView = () => {
     setIsHome(!isHome);
   };
@@ -109,6 +111,10 @@ function MyDemo() {
     }
   }
 
+  let handleSearch = (e) => {
+    setSearchInput(e.target.value);
+  };
+
   // useEffect(() => {
   //   console.log("useEffect", playlist);
   // }, [playlist]);
@@ -121,23 +127,35 @@ function MyDemo() {
           <div className="demo-wrapper">
             <div>
               <aside className="demo-sidebar">
-                <Sidebar headline="Song Box is for music ♪ Song Box is for you" />
+                <Sidebar
+                  headline="Song Box is for music ♪ Song Box is for you"
+                  searchInput={searchInput}
+                  handleSearch={handleSearch}
+                />
               </aside>
             </div>
             {isHome && (
               <div className="demo-playlist demo-view">
-                {demodata.map((d) => {
-                  return (
-                    <DemoItem
-                      playSong={toggleView}
-                      key={d.id}
-                      demoInfo={d}
-                      //colorRed={colorRed}
-                      playCurrentSong={playCurrentSong}
-                      addToPlaylist={postToPlaylist}
-                    />
-                  );
-                })}
+                {demodata
+                  .filter(
+                    (d) =>
+                      d.name
+                        .toLowerCase()
+                        .includes(searchInput.toLowerCase()) ||
+                      d.title.toLowerCase().includes(searchInput.toLowerCase())
+                  )
+                  .map((d) => {
+                    return (
+                      <DemoItem
+                        playSong={toggleView}
+                        key={d.id}
+                        demoInfo={d}
+                        //colorRed={colorRed}
+                        playCurrentSong={playCurrentSong}
+                        addToPlaylist={postToPlaylist}
+                      />
+                    );
+                  })}
               </div>
             )}
             {!isHome && (

@@ -333,6 +333,13 @@ section.Demo {
       @media screen and (max-width: 900px) {
         min-height: 150px;
       }
+      input {
+        border: none;
+        box-shadow: 3px 3px 0 darken($pink, 12);
+        border-radius: 6px;
+        padding: 5px 5px;
+        width: 100%;
+      }
     }
     //PLAYLIST
     .demo-view {

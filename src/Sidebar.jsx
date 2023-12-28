@@ -1,11 +1,18 @@
-function Sidebar({ headline }) {
+function Sidebar({ headline, searchInput, handleSearch }) {
   return (
     <>
       <div className="sidebar-wrap">
         <h4>{headline}</h4>
         <br />
-        <p>Form 1</p>
-        <p>Form 2</p>
+        <label htmlFor="search"></label>
+        <input
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Find Your Song ♪"
+          value={searchInput}
+          onChange={handleSearch}
+        />
       </div>
     </>
   );
