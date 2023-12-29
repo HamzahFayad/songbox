@@ -220,6 +220,7 @@ div ::-webkit-scrollbar {
     }
     div.poster {
       width: 325px;
+      max-height: 520px;
       background-color: $pink;
       box-shadow: 7px 7px 0 $dark;
       position: relative;
@@ -520,6 +521,14 @@ section.Demo {
       audio {
         display: block;
         margin: 1rem auto;
+        border: transparent;
+        border-radius: 40px;
+        box-shadow: 4px 4px 0 darken($pink, 10);
+        &::-webkit-media-controls-volume-control-container,
+        &::-webkit-media-controls-play-button {
+          background-color: darken($pink, 10);
+          border-radius: 50%;
+        }
       }
     }
   }
