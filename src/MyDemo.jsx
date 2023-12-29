@@ -133,6 +133,24 @@ function MyDemo() {
                   searchInput={searchInput}
                   handleSearch={handleSearch}
                 />
+                <br />
+                <hr />
+
+                {current.id && !isHome ? (
+                  <>
+                    <img
+                      className="audiowaves"
+                      src="../assets/audiowaves.gif"
+                      alt="audio waves"
+                    />
+                    <p className="curr">
+                      <strong>{current.title}</strong> <br />
+                      <span>by {current.name}</span>
+                    </p>
+                  </>
+                ) : (
+                  <></>
+                )}
               </aside>
             </div>
             {isHome && (

@@ -141,6 +141,9 @@ button {
   background: darken($pink, 4);
   color: $dark;
 }
+hr {
+  border: 1px solid $dark;
+}
 //NAVBAR
 .App .app-name a {
   border: 3px solid $dark;
@@ -344,6 +347,20 @@ section.Demo {
         padding: 5px 5px;
         width: 100%;
       }
+      .audiowaves {
+        max-width: 120px;
+        margin: 0 auto;
+        display: block;
+        opacity: 0;
+        animation: showSong 450ms ease-in-out 200ms forwards;
+      }
+      .curr {
+        background-color: $pink;
+        padding: 10px 5px;
+        margin-top: 10px;
+        opacity: 0;
+        animation: showSong 450ms ease-in-out 500ms forwards;
+      }
     }
     //PLAYLIST
     .demo-view {
@@ -366,7 +383,7 @@ section.Demo {
       overflow-x: hidden;
       gap: 15px;
       @media screen and (max-width: 900px) {
-        place-items: center;
+        place-items: baseline;
       }
       @media screen and (max-width: 900px) {
         margin: 0;
