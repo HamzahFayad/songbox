@@ -128,14 +128,14 @@ function MyDemo() {
           <div className="demo-wrapper">
             <div>
               <aside className="demo-sidebar">
-                <Sidebar
-                  headline="Song Box is for music ♪ Song Box is for you ♪"
-                  searchInput={searchInput}
-                  handleSearch={handleSearch}
-                />
+                {isHome && (
+                  <Sidebar
+                    headline="Song Box is for music ♪ Song Box is for you ♪"
+                    searchInput={searchInput}
+                    handleSearch={handleSearch}
+                  />
+                )}
                 <br />
-                <hr />
-
                 {current.id && !isHome ? (
                   <>
                     <img
@@ -182,6 +182,11 @@ function MyDemo() {
                 </button>
                 {current && (
                   <div className="playing-song" style={{ color: "white" }}>
+                    <img
+                      className="audiowaves"
+                      src="../assets/audiowaves.gif"
+                      alt="audio waves"
+                    />
                     <h2>
                       {current.title} <br />
                       <span> by {current.name}</span>
