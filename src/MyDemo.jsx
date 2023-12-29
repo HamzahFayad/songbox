@@ -62,7 +62,6 @@ function MyDemo() {
     const nextIndex = (currentSongIndex + 1) % filteredDemoSongs.length;
     setCurrentSongIndex(nextIndex); // Update the index of the current song
     setCurrent(filteredDemoSongs[nextIndex]);
-    console.log("Next" + nextIndex);
   };
 
   // Function to play the next song
@@ -70,7 +69,7 @@ function MyDemo() {
     const nextIndex = (currentSongIndex - 1) % filteredDemoSongs.length;
     setCurrentSongIndex(nextIndex);
     setCurrent(filteredDemoSongs[nextIndex]);
-    console.log(nextIndex);
+    //console.log(nextIndex);
   };
 
   // let addToPlaylist = (song) => {
