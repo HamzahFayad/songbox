@@ -15,7 +15,7 @@ function MyDemo() {
 
   const [refreshKey, setRefreshKey] = useState(0);
 
-  const [currentSongIndex, setCurrentSongIndex] = useState(1); // Track the index of the current song
+  const [currentSongIndex, setCurrentSongIndex] = useState(0); // Track the index of the current song
 
   const [searchInput, setSearchInput] = useState("");
 
@@ -48,11 +48,7 @@ function MyDemo() {
   let playCurrentSong = (song) => {
     //display current song for demo
     setCurrent(song);
-    setCurrentSongIndex(song.id);
-    // setTimeout(() => {
-    //   console.log(song);
-    //   console.log(currentSongIndex);
-    // }, 500);
+    setCurrentSongIndex(song.id - 1);
   };
 
   const filteredDemoSongs = demodata.filter(
@@ -134,7 +130,7 @@ function MyDemo() {
             <div>
               <aside className="demo-sidebar">
                 <Sidebar
-                  headline="Song Box is for music ♪ Song Box is for you"
+                  headline="Song Box is for music ♪ Song Box is for you ♪"
                   searchInput={searchInput}
                   handleSearch={handleSearch}
                 />
