@@ -130,6 +130,7 @@ function MyDemo() {
               <aside className="demo-sidebar">
                 {isHome && (
                   <Sidebar
+                    nr="1"
                     headline="Song Box is for music ♪ Song Box is for you ♪"
                     searchInput={searchInput}
                     handleSearch={handleSearch}
@@ -151,6 +152,9 @@ function MyDemo() {
                 ) : (
                   <></>
                 )}
+              </aside>
+              <aside className="demo-sidebar">
+                <Sidebar nr="2" headline="Add Your Songs ♪" />
               </aside>
             </div>
             {isHome && (
