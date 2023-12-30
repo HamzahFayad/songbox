@@ -116,6 +116,15 @@ function MyDemo() {
     setSearchInput(e.target.value);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const audioFile = formData.get("audio-file");
+    const songTitle = formData.get("song-title");
+    const artist = formData.get("artist-name");
+    console.log(`./assets/${audioFile.name}` + " " + artist + " " + songTitle);
+  };
+
   // useEffect(() => {
   //   console.log("useEffect", playlist);
   // }, [playlist]);
@@ -154,7 +163,11 @@ function MyDemo() {
                 )}
               </aside>
               <aside className="demo-sidebar">
-                <Sidebar nr="2" headline="Add your own songs ♪" />
+                <Sidebar
+                  nr="2"
+                  headline="Add your own songs ♪"
+                  handleSubmit={handleSubmit}
+                />
               </aside>
             </div>
             {isHome && (

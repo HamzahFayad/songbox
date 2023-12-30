@@ -1,4 +1,4 @@
-function Sidebar({ nr, headline, searchInput, handleSearch }) {
+function Sidebar({ nr, headline, searchInput, handleSearch, handleSubmit }) {
   return (
     <>
       {nr == 1 && (
@@ -19,8 +19,8 @@ function Sidebar({ nr, headline, searchInput, handleSearch }) {
       {nr == 2 && (
         <div className="sidebar-wrap">
           <h4>{headline}</h4>
-          <form>
-            <label class="custom-file-upload">
+          <form onSubmit={handleSubmit}>
+            <label className="custom-file-upload">
               <input
                 name="audio-file"
                 placeholder="Audio MP3"
@@ -31,7 +31,7 @@ function Sidebar({ nr, headline, searchInput, handleSearch }) {
             </label>
             <input name="song-title" placeholder="Song Title" type="text" />
             <input name="artist-name" placeholder="Artist Name" type="text" />
-            <button>Add Song</button>
+            <button type="submit">Add Song</button>
           </form>
         </div>
       )}
