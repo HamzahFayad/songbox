@@ -154,7 +154,7 @@ function MyDemo() {
                 )}
               </aside>
               <aside className="demo-sidebar">
-                <Sidebar nr="2" headline="Add Your Songs ♪" />
+                <Sidebar nr="2" headline="Add your own songs ♪" />
               </aside>
             </div>
             {isHome && (

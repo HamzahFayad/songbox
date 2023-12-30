@@ -350,7 +350,30 @@ section.Demo {
         box-shadow: 3px 3px 0 darken($pink, 12);
         border-radius: 6px;
         padding: 10px 5px;
+        margin: 10px 0;
         width: 100%;
+        font-family: "Inter Tight", sans-serif;
+        color: darken($pink, 18);
+        outline: none;
+        border: 2px solid $pink;
+
+        &::placeholder {
+          color: darken($pink, 18);
+          opacity: 0.65;
+        }
+        &:focus {
+          border: 2px solid darken($pink, 10);
+        }
+      }
+      input[type="file"] {
+        display: none;
+      }
+      .custom-file-upload {
+        border: 2px solid darken($pink, 14);
+        display: inline-block;
+        padding: 10px 15px;
+        margin: 10px 0;
+        cursor: pointer;
       }
       .curr {
         background-color: $pink;
