@@ -178,7 +178,7 @@ function MyDemo() {
             {!isHome && (
               <div className="demo-current-song demo-view">
                 <button className="homebtn" onClick={toggleView}>
-                  &#8592; Home
+                  &#8592; Demo
                 </button>
                 {current && (
                   <div className="playing-song" style={{ color: "white" }}>

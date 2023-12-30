@@ -378,6 +378,8 @@ section.Demo {
       padding: 1.25rem;
       height: 600px; //max-height?
       .no-songs {
+        color: white;
+        width: max-content;
         animation: showSong 500ms ease-in-out forwards;
       }
     }
@@ -524,7 +526,6 @@ section.Demo {
         border: transparent;
         border-radius: 40px;
         box-shadow: 4px 4px 0 darken($pink, 10);
-        &::-webkit-media-controls-volume-control-container,
         &::-webkit-media-controls-play-button {
           background-color: darken($pink, 10);
           border-radius: 50%;
