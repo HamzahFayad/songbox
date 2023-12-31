@@ -42,9 +42,10 @@ To run the Retro Jukebox Web App locally, follow these steps:
 - [x] Design and Create Feel & Look of the WebApp
 - [x] Play & Pause Audio in the Overview Section
 - [x] Toggle "Playlist View" & "Playing Song View" in the Demo Section
+- [x] Pagination - go back and forth in the "Playing Song View"
 - [ ] Fetch Music from API
 - [ ] Add Songs to Playlist Page
-- [ ] Search & Filter Options
+- [x] Search Option
 - [ ] Others
 
 <!-- CONTACT -->

@@ -116,13 +116,32 @@ function MyDemo() {
     setSearchInput(e.target.value);
   };
 
+  function create(htmlStr) {
+    var frag = document.createDocumentFragment(),
+      temp = document.createElement("div");
+    temp.innerHTML = htmlStr;
+    while (temp.firstChild) {
+      frag.appendChild(temp.firstChild);
+    }
+    return frag;
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    const audioFile = formData.get("audio-file");
+    const audioFile = `./assets/${formData.get("audio-file").name}`;
     const songTitle = formData.get("song-title");
     const artist = formData.get("artist-name");
-    console.log(`./assets/${audioFile.name}` + " " + artist + " " + songTitle);
+    //console.log(audioFile + " " + songTitle + " " + artist);
+    const newData = {
+      id: demodata.length + 1,
+      audio: audioFile,
+      name: artist,
+      title: songTitle,
+      img: "https://ih1.redbubble.net/image.4546560346.4850/flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
+      inPlaylist: false,
+    };
+    console.log(newData);
   };
 
   // useEffect(() => {
