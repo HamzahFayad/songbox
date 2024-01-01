@@ -116,16 +116,6 @@ function MyDemo() {
     setSearchInput(e.target.value);
   };
 
-  function create(htmlStr) {
-    var frag = document.createDocumentFragment(),
-      temp = document.createElement("div");
-    temp.innerHTML = htmlStr;
-    while (temp.firstChild) {
-      frag.appendChild(temp.firstChild);
-    }
-    return frag;
-  }
-
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -141,6 +131,14 @@ function MyDemo() {
       img: "https://ih1.redbubble.net/image.4546560346.4850/flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
       inPlaylist: false,
     };
+    fetch("http://localhost:3001/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newData),
+    }).then((response) => {
+      console.log(response);
+      return response.text();
+    });
     console.log(newData);
   };
 
