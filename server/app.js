@@ -22,9 +22,9 @@ app.post("/", function (req, res) {
     img: img,
     inPlaylist: inPlaylist,
   };
-  const jsonData = `${JSON.stringify(newSong)}`;
+  const jsonData = `,\n${JSON.stringify(newSong, null, 2)}\n];`;
 
-  fs.writeFileSync("../src/data/demo-test.js", jsonData, (err) => {
+  fs.appendFile("../src/data/demo-test.js", jsonData, (err) => {
     if (err) {
       console.error(err);
       res.status(500).send("Error appending data to file");
